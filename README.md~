@@ -2,7 +2,7 @@
     
 ## Maintainer Contact   
 
- * <FULLNAME> (Nickname: <NICKNAME>, <EMAIL>)
+ * <William Melbourne> (Nickname: <vancouverwill>, <will_melbourne (at) hotmail (dot) com>)
 
 ## Requirements
 
@@ -14,7 +14,10 @@
 
 ## Installation Instructions
 
-<Step by step instructions>
+1- Upload folder to the root of your silverstripe installation
+2- Make sure that the folder is named SSNivoSlider so that links to Js and Css still work
+(If you want to change the name that's fine just do a search and replace for the foldre name)
+3- 
 
 ## Usage Overview
 
@@ -23,3 +26,7 @@
 ## Known issues
 
 <Popular issues, how to solve them, and links to tickets in the bugtracker>
+
+## To do
+
+Get latest version of nivo

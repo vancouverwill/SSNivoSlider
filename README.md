@@ -2,7 +2,7 @@
     
 ## Maintainer Contact   
 
- * <FULLNAME> (Nickname: <NICKNAME>, <EMAIL>)
+ * <William Melbourne> (Nickname: <vancouverwill>, <will_melbourne (at) hotmail (dot) com>)
 
 ## Requirements
 
@@ -14,7 +14,13 @@
 
 ## Installation Instructions
 
-<Step by step instructions>
+1- Upload folder to the root of your silverstripe installation
+2- Make sure that the folder is named SSNivoSlider so that links to Js and Css still work
+(If you want to change the name that's fine just do a search and replace for the foldre name)
+3- run dev/build
+4- Go to admin and create a SSNivoSliderPage
+5- On the SSNivoSliderPage select the slider tab and add some new slides
+6- If your pictures aren't all the same size you will need to set the size & width of the NivoSlider
 
 ## Usage Overview
 

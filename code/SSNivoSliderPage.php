@@ -1,4 +1,4 @@
-<?php 
+<?php
 class SSNivoSliderPage extends Page {
 
 	static $db = array (
@@ -6,7 +6,7 @@ class SSNivoSliderPage extends Page {
 	,'SliderHeight' => 'Text'
 		
 	);
-	
+
 	static $has_many = array (
 		'Sliders' => 'SSNivoSliderObject'
 	);
@@ -18,28 +18,26 @@ class SSNivoSliderPage extends Page {
 
 		$projectFields->addFieldToTab('Root.Content.Slider', new TextField('SliderWidth', 'SliderWidth'));
 		$projectFields->addFieldToTab('Root.Content.Slider', new TextField('SliderHeight', 'SliderHeight'));
-		$tablefield = new ComplexTableField(
-		//$tablefield = new DataObjectManager(
-			 $this,					// Controller
+
+		if (class_exists('DataObjectManager'))$a='DataObjectManager'; else $a='ComplexTableField';
+		$tablefield = new $a(
+
+		$this,					// Controller
 			 'Sliders',				// Source name
 			 'SSNivoSliderObject',				// Source class
-			 array(
-			// 'ID' => 'ID',
-	//		'Position' => 'Position',
+		array(
 			'SlideTitle' => 'Title',
-	/*		'SlideDate' => 'Date',*/
 			'ThumbnailLogo' => 'Thumbnail',
 			'SlideLink' => 'Link'
-		/*	'IsActive' => 'Status'*/
-			 ),
+		),
 			 'getRotatorCMSFields_forPopup'
-		  );
-		  
-	//	$tablefield->removePermission("delete");
+		);
+
+		//	$tablefield->removePermission("delete");  //you might need this depending on the setup
 		$tablefield->setPermissions(array('show','edit','add')) ;
 		$projectFields->addFieldToTab( 'Root.Content.Slider', $tablefield );
 			
-		
+
 		return $projectFields;
 	}
 
@@ -49,9 +47,9 @@ class SSNivoSliderPage_Controller extends Page_Controller {
 
 	public function init() {
 		parent::init();
-		
-		Requirements::javascript('https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'); 
-		Requirements::javascript('SSNivoSlider/javascript/jquery.nivo.slider.pack.js'); 
+
+		Requirements::javascript('https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js');
+		Requirements::javascript('SSNivoSlider/javascript/jquery.nivo.slider.pack.js');
 		Requirements::css("SSNivoSlider/css/nivo-slider.css");
 		Requirements::customScript('
 		
