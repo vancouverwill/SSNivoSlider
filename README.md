@@ -1,4 +1,4 @@
-# <MODULENAME> Module
+# <MODULENAME> SSNivoSlider
     
 ## Maintainer Contact   
 
@@ -6,7 +6,7 @@
 
 ## Requirements
 
- * <Specific SilverStripe version, PHP, MySQL, ...>
+not required but dataobjectmanager and uploadify make the whole experience a bit more slick
 
 ## Documentation
 
